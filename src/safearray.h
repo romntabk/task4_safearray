@@ -48,14 +48,19 @@ public:
      */
     SafeArray(size_t cap);
     
+	SafeArray(const SafeArray &obj);
 
     // TODO: не забудьте про конструктор копирования и еще кое-что!
+
     
     /** \brief Деструктор.
      *
      *  Освобождает занимаемую массивом память.
      */
     ~SafeArray(); // destructor
+
+
+    SafeArray<T>& operator= (const SafeArray &obj);
 
     /** \brief Оператор индексирования.
      *
